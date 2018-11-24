@@ -67,11 +67,47 @@
 }
 
 $blue: #032c6b;
+$blue-dark: #02377b;
+
 $ink: #111;
+$ink-grey: #979da3;
 $ink-footer: #929ba4;
 $ink-light: #dadada;
 $ink-lighter: #efefef;
 $yellow-light: #fbd243;
+$yellow-orange: #d68d00;
+
+$select-hover: #bcd3e3;
+$url: #1864af;
+$success: #289f6b;
+
+$input-focus: #8eb9e5;
+
+// Global
+* {
+    transition: all 0.3s;
+}
+
+ul.ico-rating {
+    display: inline-block;
+
+    li {
+        display: inline-block;
+        border-bottom: 0;
+
+        img {
+            width: 1rem;
+            height: auto;
+        }
+    }
+}
+
+p.profile-address {
+    margin: 0;
+    color: $ink-light;
+}
+
+// Global - end
 
 body {
     font-family: "Gotham Book", "Helvetica Neue", Arial, sans-serif;
@@ -89,6 +125,12 @@ body {
 
         .logo {
             height: 100%;
+
+            img {
+                max-width: 544px;
+                width: 100%;
+                height: auto;
+            }
         }
 
         .services-key-points {
@@ -124,9 +166,10 @@ body {
         background: $blue url("../images/glow-bg.jpg") no-repeat;
         background-size: 110% 150%;
         background-position: center;
+        background-attachment: fixed;
 
         .hdr-content {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
 
             h1 {
                 font-family: GothamLight;
@@ -140,19 +183,136 @@ body {
         // .hdr-content
         .find-lawyer {
             padding-right: 3rem;
+
+            form {
+                .form-group {
+
+                    label {
+                        position: relative;
+                        width: 100%;
+                        margin-bottom: 0.25rem;
+                        font-family: GothamMedium;
+
+                        .ico-chevron-down {
+                            position: absolute;
+                            top: 65%;
+                            right: 1.5rem;
+                            transform: translateY(-50%);
+                            width: 1.5rem;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+
+                        .step-input {
+                            position: absolute;
+                            top: 65%;
+                            left: 0.6rem;
+                            transform: translateY(-50%);
+                            padding-top: 12px;
+                            padding-left: 18px;
+                            width: 45px;
+                            height: 45px;
+                            box-sizing: border-box;
+                            font-family: GothamBold;
+                            background: $yellow-orange;
+                            border-radius: 50%;
+                        }
+
+                        input {
+                            height: 66px;
+                            margin-top: 0.25rem;
+                            padding-left: 60px;
+                            border-radius: 50px;
+                            background: white;
+                            cursor: pointer;
+
+                            &:active,
+                            &:focus {
+                                box-shadow: 0 0 15px 0 $input-focus;
+                            }
+                        }
+
+                        ul.input-results {
+                            position: absolute;
+                            z-index: 2;
+                            left: 2rem;
+                            padding: 0;
+                            list-style-type: none;
+                            background: white;
+                            border-radius: 3px;
+                            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.21);
+
+                            li {
+                                padding: 1rem 2rem;
+                                box-sizing: border-box;
+                                font-family: GothamLight;
+                                font-size: 1rem;
+                                color: $ink;
+                                cursor: pointer;
+
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    background: $select-hover;
+                                }
+                            }
+                        }
+
+                        ul.artificial-select {
+                            position: absolute;
+                            z-index: 2;
+                            left: 2rem;
+                            padding: 0;
+                            width: 87%;
+                            list-style-type: none;
+                            background: white;
+                            border-radius: 3px;
+                            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.21);
+
+                            li {
+                                padding: 0.5rem 2rem;
+                                width: 100%;
+                                box-sizing: border-box;
+                                font-family: GothamLight;
+                                font-size: 1rem;
+                                color: $ink;
+                                cursor: pointer;
+
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    background: $select-hover;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                // .form-group
+                .no-category {
+                    text-align: center;
+
+                    a {
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
 
         // .find-lawyer
         .featured-lawyers {
             font-size: 0.9rem;
 
-            ul {
+            ul.featured-lawyers-list {
                 padding: 0;
                 list-style-type: none;
 
                 li {
-                    padding: 0.75rem 0;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.21);
 
                     .profile {
                         text-align: center;
@@ -163,16 +323,24 @@ body {
                         }
 
                         .profile-img {
+                            position: relative;
                             margin-bottom: 1rem;
                             width: 100%;
                             background: rgba(0, 0, 0, 0.45);
                             border-radius: 50%;
                             overflow: hidden;
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 101%;
+                                height: auto;
+                            }
                         }
 
                         p.profile-address {
-                            margin: 0;
-                            color: $ink-light;
                             font-size: 0.81rem;
                         }
                     }
@@ -185,17 +353,7 @@ body {
                         }
 
                         ul.ico-rating {
-                            display: inline-block;
-
-                            li {
-                                display: inline-block;
-                                border-bottom: 0;
-
-                                img {
-                                    width: 1rem;
-                                    height: auto;
-                                }
-                            }
+                            padding-left: 0.5rem;
                         }
 
                         p.description {
@@ -224,6 +382,8 @@ body {
                     }
                 }
             }
+
+            ul.featured-lawyers-list>li {}
         }
     }
 
@@ -294,4 +454,285 @@ body {
     }
 
     // footer
+
+    .modal {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+
+        .modal-click {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            // background: red;
+        }
+
+        .modal-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem 2rem 4rem 2rem;
+            max-width: 800px;
+            max-height: 62vh;
+            box-sizing: border-box;
+            background: white;
+            box-shadow: 0 9px 21px 0 rgba(0, 0, 0, 0.45);
+            border-radius: 6px;
+
+            .modal-content-00 {
+                max-width: 740px;
+                max-height: 52vh;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                .modal-title {
+                    margin-bottom: 2rem;
+                    border-bottom: 1px solid $ink-lighter;
+
+                    h2 {
+                        margin: 0;
+                    }
+
+                    span {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .close {
+                position: absolute;
+                bottom: 1.25rem;
+                right: 2rem;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+
+            .btn-close {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+                width: 1.5rem;
+                height: auto;
+                cursor: pointer;
+            }
+        }
+
+        #client-review {
+            .lawyer-profile {
+                margin-bottom: 2rem;
+
+                .modal-profile {
+
+                    .modal-profile-img {
+                        position: relative;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+
+                h1 {
+                    margin: 0;
+                }
+
+                .profile-address {
+                    color: $ink-grey;
+                }
+            }
+
+            .lawyer-rating {
+                position: relative;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid $ink-lighter;
+
+                h3 {
+                    display: inline-block;
+                }
+
+                ul {
+                    position: absolute;
+                    top: 35%;
+                    transform: translateY(-50%);
+                    padding-left: 1rem;
+                }
+            }
+
+            table.rating-list {
+                margin-bottom: 1rem;
+                box-sizing: border-box;
+                table-layout: fixed;
+                font-size: 0.9rem;
+                border-collapse: collapse;
+
+                tr {
+                    border-bottom: 1px dotted $ink-light;
+
+                    td {
+                        padding-right: 1rem;
+                        width: 50%;
+                        height: 36px;
+                        box-sizing: border-box;
+
+                        &:last-child {
+                            text-align: right;
+                        }
+
+                        ul {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .review {
+                font-size: 0.9rem;
+
+                .review-hdr {
+                    font-weight: bold;
+
+                    ul {
+                        margin-right: 0.5rem;
+                        padding: 0;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        // #client-review - end
+
+        #other-categories {
+            ul {
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    margin-bottom: 0.25rem;
+
+                    a {
+                        font-family: GothamLight;
+                        color: $url;
+                    }
+                }
+            }
+        }
+
+        // #other-categories - end
+
+        #step-3 {
+            padding: 2rem;
+
+            .modal-content-00 {
+                overflow: initial;
+            }
+
+            h3 {
+                margin-bottom: 2rem;
+
+                span {
+                    display: inline-block;
+                    padding-top: 0.4rem;
+                    padding-left: 0.75rem;
+                    width: 2rem;
+                    height: 2rem;
+                    vertical-align: middle;
+                    font-family: GothamBold;
+                    font-size: 1rem;
+                    color: white;
+                    background: $yellow-orange;
+                    border-radius: 50%;
+                }
+            }
+
+            form {
+                label.chk {
+                    display: block;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 1.5rem;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    user-select: none;
+
+                    input {
+                        width: 0;
+                        height: 0;
+                        opacity: 0;
+                    }
+
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 25px;
+                        width: 25px;
+                        background-color: white;
+                        border: 1px solid $ink-grey;
+                        border-radius: 3px;
+                    }
+
+                    /* Create the checkmark/indicator (hidden when not checked) */
+                    .checkmark:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                }
+
+                /* Show the checkmark when checked */
+                label.chk input:checked~.checkmark:after {
+                    display: block;
+                }
+
+                label.chk input:checked~.checkmark {
+                    background: $success;
+                    border: 1px solid $success;
+                }
+
+                /* Style the checkmark/indicator */
+                label.chk .checkmark:after {
+                    left: 9px;
+                    top: 4px;
+                    width: 7px;
+                    height: 12px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+
+                .btn-submit {
+                    width: 100%;
+                    text-align: center;
+
+                    button {
+                        margin-top: 1rem;
+                        padding: 1rem 3rem;
+                        font-family: GothamBold;
+                        font-size: 1.25rem;
+                        text-transform: uppercase;
+                        color: white;
+                        background: $blue;
+                        border: 1px solid $blue-dark;
+                        border-radius: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    // .modal
 }

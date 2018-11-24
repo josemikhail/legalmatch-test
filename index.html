@@ -19,14 +19,14 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 d-flex hdr-content">
+                <div class="col-md-7 col-lg-8 d-flex hdr-content">
                     <nav class="navbar navbar-expand-lg align-self-center logo">
                         <a class="navbar-brand" href="#">
                             <img src="assets/images/legalmatch-logo.jpg" />
                         </a>
                     </nav>
                 </div>
-                <div class="col-sm-4 d-flex hdr-content">
+                <div class="col-md-5 col-lg-4 d-flex hdr-content">
                     <div class="align-self-center services-key-points">
                         <ul class="">
                             <li><img src="assets/images/ico-chk.svg" /> No fee to present your case</li>
@@ -46,38 +46,62 @@
                 <h2>Fast, Free and Confidential</h2>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-lg-6">
                     <div class="find-lawyer">
                         <form>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                    placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                <label for="zip-city">
+                                    <span>Enter Zip Code or City</span>
+                                    <input type="text" class="form-control" id="zip-city" aria-describedby="emailHelp"
+                                        placeholder="Does not have to be where you live">
+                                    <div class="step-input">1</div>
+                                    <ul class="input-results d-none">
+                                        <li>Nowheresville, XX 00000</li>
+                                    </ul>
+                                </label>
+                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                     anyone
-                                    else.</small>
+                                    else.</small> -->
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <label for="legal-category">
+                                    <span>Choose a category</span>
+                                    <input type="text" class="form-control" id="legal-category" placeholder="Click to choose a legal category"
+                                        readonly>
+                                    <div class="ico-chevron-down"><img src="assets/images/ico-dropdown.svg" /></div>
+                                    <div class="step-input">2</div>
+                                    <ul class="artificial-select d-none">
+                                        <li>Family</li>
+                                        <li>Criminal Defense</li>
+                                        <li>Business</li>
+                                        <li>Personal Injury</li>
+                                        <li>Bankruptcy & Finances</li>
+                                        <li>Products & Services</li>
+                                        <li>Employment</li>
+                                        <li>Real Estate</li>
+                                        <li>Immigration</li>
+                                        <li>Government</li>
+                                        <li>Intellectual Property</li>
+                                    </ul>
+                                </label>
                             </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            <div id="no-category" class="no-category">
+                                Can't find your category?
+                                <a href="#">Click here.</a>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary d-none">Submit</button>
                         </form>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-lg-6 client-review-lawyers">
                     <h3>Clients review LegalMatch lawyers</h3>
                     <div class="featured-lawyers">
-                        <ul>
+                        <ul class="featured-lawyers-list">
                             <li>
                                 <div class="row">
                                     <div class="col-sm-3 profile">
                                         <div class="profile-img">
-                                            <img src="" />
+                                            <img src="assets/images/profile-00.jpg" />
                                         </div>
                                         <p>
                                             Mitchell M.
@@ -118,7 +142,7 @@
                                 <div class="row">
                                     <div class="col-sm-3 profile">
                                         <div class="profile-img">
-                                            <img src="" />
+                                            <img src="assets/images/profile-01.jpg" />
                                         </div>
                                         <p>
                                             Mitchell M.
@@ -159,7 +183,7 @@
                                 <div class="row">
                                     <div class="col-sm-3 profile">
                                         <div class="profile-img">
-                                            <img src="" />
+                                            <img src="assets/images/profile-02.jpg" />
                                         </div>
                                         <p>
                                             Mitchell M.
@@ -249,6 +273,324 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal d-none">
+        <div class="modal-click"></div>
+        <div id="client-review" class="modal-container d-none">
+            <div class="modal-content-00">
+                <h2 class="modal-title">Client Reviews</h2>
+                <div class="row lawyer-profile">
+                    <div class="col-sm-4 modal-profile">
+                        <div class="modal-profile-img">
+                            <img src="assets/images/profile-00.jpg" />
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1>
+                            Brigida R.
+                        </h1>
+                        <p class="profile-address">
+                            Dallas, TX
+                        </p>
+                        <p>
+                            Family Law
+                        </p>
+                    </div>
+                </div>
+                <div class="lawyer-rating">
+                    <h3>
+                        Rating (29 users)
+                    </h3>
+                    <ul class="ico-rating">
+                        <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                        <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                        <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                        <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                        <li><img src="assets/images/ico-star-grey.svg" /></li>
+                    </ul>
+                </div>
+                <table class="rating-list">
+                    <tbody>
+                        <tr>
+                            <td>
+                                </strong>Overall</strong>
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Responded in a timely manner
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Answered questions clearly
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Understood needs
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Gave complete and clear information
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Knowledgeable in legal area
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Good value for money
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Would hire again
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Would recommend to friend
+                            </td>
+                            <td>
+                                <ul class="ico-rating">
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                                    <li><img src="assets/images/ico-star-grey.svg" /></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="review">
+                    <div class="review-hdr">
+                        <ul class="ico-rating">
+                            <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                            <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                            <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                            <li><img src="assets/images/ico-star-yellow.svg" /></li>
+                            <li><img src="assets/images/ico-star-grey.svg" /></li>
+                        </ul>
+                        by Dexter Marchal, 06/10/2016
+                    </div>
+                    <p>
+                        Deb did a great job. Got my bench warrant set aside ... was sure I was
+                        going to jail ... phew. Judge seemed to respect her and I got what I
+                    </p>
+                </div>
+            </div>
+            <div class="axn-close close">Close</div>
+            <div class="axn-close btn-close"><img src="assets/images/ico-exit.svg" /></div>
+        </div>
+        <!-- Client Review - end -->
+
+        <div id="other-categories" class="modal-container d-none">
+            <div class="modal-content-00">
+                <div class="modal-title">
+                    <h2>
+                        Other Categories
+                    </h2>
+                    <span>Choose the category that best fits your case</span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum sit amet</a></li>
+                            <li><a href="#">Lorem sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Fusce in arcu dignissim dolor sit amet</a></li>
+                            <li><a href="#">Fusce in arcu dignissim</a></li>
+                            <li><a href="#">Lorem ipsum dolor arcu dignissim</a></li>
+                            <li><a href="#">Lorem dolor sit amet</a></li>
+                            <li><a href="#">Ipsum dolor sit amet</a></li>
+                            <li><a href="#">Dolor sit amet</a></li>
+                            <li><a href="#">Fusce in arcu dignissim sit</a></li>
+                            <li><a href="#">Lorem ipsum </a></li>
+                            <li><a href="#">Dolor sit amet</a></li>
+                            <li><a href="#">Sit amet ligula amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Et purus sit amet ligula</a></li>
+                            <li><a href="#">Fusce et purus sit amet ligula sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Fusce et purus sit amet ligula</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Lorem ipsum sit amet</a></li>
+                            <li><a href="#">Lorem sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Fusce in arcu dignissim dolor sit amet</a></li>
+                            <li><a href="#">Fusce in arcu dignissim</a></li>
+                            <li><a href="#">Lorem ipsum dolor arcu dignissim</a></li>
+                            <li><a href="#">Lorem dolor sit amet</a></li>
+                            <li><a href="#">Ipsum dolor sit amet</a></li>
+                            <li><a href="#">Dolor sit amet</a></li>
+                            <li><a href="#">Fusce in arcu dignissim sit</a></li>
+                            <li><a href="#">Lorem ipsum </a></li>
+                            <li><a href="#">Dolor sit amet</a></li>
+                            <li><a href="#">Sit amet ligula amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Et purus sit amet ligula</a></li>
+                            <li><a href="#">Fusce et purus sit amet ligula sit amet</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Fusce et purus sit amet ligula</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="axn-close close">Close</div>
+            <div class="axn-close btn-close"><img src="assets/images/ico-exit.svg" /></div>
+        </div>
+        <!-- Other Categories - end -->
+
+        <div id="step-3" class="modal-container d-none">
+            <div class="modal-content-00">
+                <h3>
+                    <span>3</span>
+                    Which Family law issue(s) apply to your case?
+                </h3>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="chk">Adoptions
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="chk">Guardianship
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="chk">Child Custody and Visitation
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="chk">Paternity
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="chk">Child Support
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="chk">Separations
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="chk">Divorce
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="chk">Spousal Support or Alimony
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-submit">
+                        <button type="submit" class="submit">FIND A LAWYER NOW</button>
+                    </div>
+                </form>
+            </div>
+            <div class="axn-close btn-close"><img src="assets/images/ico-exit.svg" /></div>
+        </div>
+        <!-- .step-3 - end -->
+
+    </div>
+    <!-- Modal -->
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
