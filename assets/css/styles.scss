@@ -1,0 +1,297 @@
+@font-face {
+    font-family: GothamBook;
+    src: url('../fonts/Gotham-Book.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Book.otf') format('opentype'),
+        /* IE6-IE8 */
+        url('../fonts/Gotham-Book.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/Gotham-Book.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/Gotham-Book.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/Gotham-Book.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url('../fonts/Gotham-Light.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/Gotham-Light.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/Gotham-Light.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/Gotham-Light.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/Gotham-Light.svg#svgFontName') format('svg'),
+        url('../fonts/Gotham-Light.otf') format('opentype');
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: GothamMedium;
+    src: url('../fonts/Gotham-Medium.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Medium.otf') format('opentype'),
+        /* IE6-IE8 */
+        url('../fonts/Gotham-Medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/Gotham-Medium.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/Gotham-Medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/Gotham-Medium.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: GothamBold;
+    src: url('Gotham-Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Bold.otf') format('opentype'),
+        /* IE6-IE8 */
+        url('Gotham-Bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('Gotham-Bold.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('Gotham-Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('Gotham-Bold.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+$blue: #032c6b;
+$ink: #111;
+$ink-footer: #929ba4;
+$ink-light: #dadada;
+$ink-lighter: #efefef;
+$yellow-light: #fbd243;
+
+body {
+    font-family: "Gotham Book", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    color: $ink;
+
+    header {
+        height: 120px;
+        background: white;
+        box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.21);
+
+        .hdr-content {
+            height: 120px;
+        }
+
+        .logo {
+            height: 100%;
+        }
+
+        .services-key-points {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            ul {
+                position: absolute;
+                top: 52%;
+                transform: translateY(-50%);
+                margin-bottom: 0;
+                padding: 0;
+                width: 100%;
+                list-style-type: none;
+
+                li {
+                    img {
+                        margin-right: 3px;
+                        width: 18px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    // header
+    .content {
+        padding: 2rem 0;
+        min-height: 450px;
+        color: white;
+        background: $blue url("../images/glow-bg.jpg") no-repeat;
+        background-size: 110% 150%;
+        background-position: center;
+
+        .hdr-content {
+            margin-bottom: 2rem;
+
+            h1 {
+                font-family: GothamLight;
+            }
+
+            h2 {
+                font-family: GothamBold;
+            }
+        }
+
+        // .hdr-content
+        .find-lawyer {
+            padding-right: 3rem;
+        }
+
+        // .find-lawyer
+        .featured-lawyers {
+            font-size: 0.9rem;
+
+            ul {
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    padding: 0.75rem 0;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+
+                    .profile {
+                        text-align: center;
+
+                        p {
+                            margin: 0;
+                            font-family: GothamMedium;
+                        }
+
+                        .profile-img {
+                            margin-bottom: 1rem;
+                            width: 100%;
+                            background: rgba(0, 0, 0, 0.45);
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+
+                        p.profile-address {
+                            margin: 0;
+                            color: $ink-light;
+                            font-size: 0.81rem;
+                        }
+                    }
+
+                    .profile-description {
+                        p.law-category {
+                            display: inline-block;
+                            margin-right: 1rem;
+                            font-weight: bold;
+                        }
+
+                        ul.ico-rating {
+                            display: inline-block;
+
+                            li {
+                                display: inline-block;
+                                border-bottom: 0;
+
+                                img {
+                                    width: 1rem;
+                                    height: auto;
+                                }
+                            }
+                        }
+
+                        p.description {
+                            font-family: GothamLight;
+                            font-style: italic;
+                        }
+
+                        p.read-review {
+                            margin: 0;
+                            text-align: right;
+
+                            a {
+                                color: $yellow-light;
+
+                                span.ico-review {
+                                    margin-left: 0.25rem;
+
+                                    img {
+                                        width: 1.5rem;
+                                        height: auto;
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .content
+
+    footer {
+        color: $ink-footer;
+        padding: 3rem 0;
+
+        .container {
+            padding-bottom: 3rem;
+            border-bottom: 1px solid $ink-lighter;
+
+            .ftr-business-info-area {
+                text-align: center;
+
+                ul.site-links {
+                    padding: 0;
+
+                    li {
+                        display: inline-block;
+                        margin-right: -1px;
+                        padding-right: 0.6rem;
+
+                        &::before {
+                            display: inline-block;
+                            position: relative;
+                            top: -3px;
+                            margin-right: 1rem;
+                            width: 6px;
+                            height: 6px;
+                            content: "";
+                            background: $ink-footer;
+                            border-radius: 50%;
+                        }
+
+                        a {
+                            color: $ink-footer;
+                        }
+                    }
+
+                    li:first-child {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+
+                p.copyright-info {
+                    margin: 0;
+                }
+            }
+
+            .ftr-site-info {
+                text-align: right;
+
+                a {
+                    display: inline-block;
+
+                    img {
+                        width: 134px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // footer
+}
